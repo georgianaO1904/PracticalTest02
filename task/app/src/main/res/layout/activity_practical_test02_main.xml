@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Server"
+        android:textSize="24dp" />
+
+    <LinearLayout
+        android:id="@+id/serverLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/serverPort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Port">
+        </EditText>
+        <Button
+            android:id="@+id/serverConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Connect">
+        </Button>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Client"
+        android:textSize="24dp"
+        android:layout_below="@+id/serverLinear"/>
+
+    <LinearLayout
+        android:id="@+id/clientLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleClient"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/clientAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:hint="Address">
+        </EditText>
+
+        <EditText
+            android:id="@+id/clientPort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:hint="Port">
+        </EditText>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/clientInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/clientLinear"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/pokemonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="pokemon name">
+        </EditText>
+
+        <Button
+            android:id="@+id/clientGetInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Get info">
+        </Button>
+        <ImageView
+            android:id="@+id/pokemonImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal">
+        </ImageView>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/clientInfo">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Returned info:"
+                android:textSize="22sp"
+                android:layout_marginLeft="20dp"/>
+            <TextView
+                android:id="@+id/showAbilities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="pokemonAbilities"
+                android:layout_margin="5dp"/>
+            <TextView
+                android:id="@+id/showPokemonTypes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="pokemonType"
+                android:layout_margin="5dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
